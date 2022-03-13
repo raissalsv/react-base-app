@@ -4,7 +4,11 @@
   "description": "fullstack app base react",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon server"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "start": "node server",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
