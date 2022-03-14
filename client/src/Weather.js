@@ -5,8 +5,13 @@ import { Row, Col, Table } from 'reactstrap';
 const Weather = (props) => {
     const {data} = props;
 
-    if(!data)
-        return <div></div>;
+    if(!data){
+      return <div></div>;
+    }
+    
+    else if(data.error){
+      return <div>{data.error}</div>;
+    }
 
     
     return (

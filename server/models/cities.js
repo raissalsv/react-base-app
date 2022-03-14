@@ -2,7 +2,7 @@ const db = require('../database');
 
 class Cities {
     static retrieveAll(callback){
-        db.query(`SELECT city_name from cities`, function (err, res){
+        db.query(`SELECT city_name from cities GROUP BY city_name`, function (err, res){
             if (err.error)
                 return callback(err);
             callback(res);

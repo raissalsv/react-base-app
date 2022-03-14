@@ -11,7 +11,7 @@ class Weather {
             callback(res);
         }).catch(function (err) {
             console.log(err);
-            callback({ error: 'Could not reach OpenWeatherAPI.'});
+            callback({ error: 'Sorry, could not reach OpenWeatherAPI.'});
         });
     }
 }
